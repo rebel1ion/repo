@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RebellionX Repo</title>
+  <style>
+    :root {
+      --purple: #8b2be2;
+      --purple-glow: #a855f7;
+      --purple-dim: #6d28d9;
+      --bg: #07070d;
+      --card: #0f0f1a;
+      --border: rgba(139, 43, 226, 0.25);
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      padding: 24px 16px;
+    }
+
+    /* ── background glow ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 40% at 50% 0%, rgba(139,43,226,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 30% at 80% 80%, rgba(168,85,247,0.10) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+
+    /* ── logo ── */
+    .logo-wrap {
+      width: 96px;
+      height: 96px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #1a0a2e, #2d0a5e);
+      border: 1.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 40px rgba(139,43,226,0.4), 0 0 80px rgba(139,43,226,0.15);
+      overflow: hidden;
+    }
+    .logo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+    .logo-x {
+      font-size: 48px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #c084fc, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -2px;
+    }
+
+    /* ── title block ── */
+    .title-block {
+      text-align: center;
+    }
+    .title-block h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #ffffff 30%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+    .title-block p {
+      font-size: 14px;
+      color: var(--muted);
+      font-style: italic;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── url copy box ── */
+    .url-box {
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .url-box:hover {
+      border-color: var(--purple-glow);
+      box-shadow: 0 0 16px rgba(139,43,226,0.2);
+    }
+    .url-box .url-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .url-box .url-text {
+      flex: 1;
+      font-size: 13px;
+      color: var(--purple-glow);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      word-break: break-all;
+    }
+    .url-box .copy-btn {
+      font-size: 11px;
+      background: rgba(139,43,226,0.2);
+      color: var(--purple-glow);
+      border: 1px solid rgba(139,43,226,0.3);
+      border-radius: 6px;
+      padding: 4px 10px;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+    .url-box:hover .copy-btn { background: rgba(139,43,226,0.35); }
+    .url-box.copied .copy-btn { color: #4ade80; border-color: rgba(74,222,128,0.3); background: rgba(74,222,128,0.1); }
+
+    /* ── add source buttons ── */
+    .add-section {
+      width: 100%;
+    }
+    .add-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .pm-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .pm-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 8px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .pm-btn:hover {
+      transform: translateY(-2px);
+      border-color: var(--purple-glow);
+      box-shadow: 0 8px 24px rgba(139,43,226,0.25);
+    }
+    .pm-btn:active { transform: scale(0.97); }
+    .pm-btn .pm-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+    .pm-btn.sileo .pm-icon  { background: linear-gradient(135deg, #1d4ed8, #7c3aed); }
+    .pm-btn.zebra .pm-icon  { background: linear-gradient(135deg, #1a1a1a, #333); border: 1px solid #444; }
+    .pm-btn.cydia .pm-icon  { background: linear-gradient(135deg, #b45309, #d97706); }
+    .pm-btn .pm-name { font-size: 12px; color: var(--muted); font-weight: 500; }
+
+    /* ── divider ── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+
+    /* ── telegram button ── */
+    .tg-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, #0088cc22, #0088cc11);
+      border: 1px solid rgba(0,136,204,0.3);
+      border-radius: 14px;
+      text-decoration: none;
+      color: #38bdf8;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s;
+      width: 100%;
+      justify-content: center;
+    }
+    .tg-btn:hover {
+      background: linear-gradient(135deg, #0088cc33, #0088cc22);
+      border-color: rgba(0,136,204,0.6);
+      box-shadow: 0 4px 20px rgba(0,136,204,0.2);
+      transform: translateY(-1px);
+    }
+    .tg-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+    /* ── footer ── */
+    .footer {
+      font-size: 11px;
+      color: rgba(148,163,184,0.4);
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── toast ── */
+    .toast {
+      position: fixed;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: rgba(139,43,226,0.9);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      opacity: 0;
+      transition: all 0.3s;
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 100;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Logo -->
+  <div class="logo-wrap" id="logoWrap">
+    <img src="logo.png" alt="RebellionX" onerror="this.style.display='none';document.getElementById('logoFallback').style.display='flex';" />
+    <span class="logo-x" id="logoFallback" style="display:none">X</span>
+  </div>
+
+  <!-- Title -->
+  <div class="title-block">
+    <h1>RebellionX Repo</h1>
+    <p>Built different. Made to dominate.</p>
+  </div>
+
+  <!-- URL copy box -->
+  <div class="url-box" id="urlBox" onclick="copyUrl()">
+    <span class="url-icon">🔗</span>
+    <span class="url-text" id="urlText">REPO_URL</span>
+    <span class="copy-btn" id="copyBtn">Copy</span>
+  </div>
+
+  <!-- Add source buttons -->
+  <div class="add-section">
+    <p class="add-label">Add to package manager</p>
+    <div class="pm-grid">
+      <a class="pm-btn sileo" id="sileoBtn" href="#">
+        <div class="pm-icon">💎</div>
+        <span>Sileo</span>
+        <span class="pm-name">Tap to add</span>
+      </a>
+      <a class="pm-btn zebra" id="zebraBtn" href="#">
+        <div class="pm-icon">🦓</div>
+        <span>Zebra</span>
+        <span class="pm-name">Tap to add</span>
+      </a>
+      <a class="pm-btn cydia" id="cydiaBtn" href="#">
+        <div class="pm-icon">📦</div>
+        <span>Cydia</span>
+        <span class="pm-name">Tap to add</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Telegram -->
+  <a class="tg-btn" href="https://t.me/eightevils" target="_blank">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.026 9.54c-.148.666-.54.83-1.094.516l-3.03-2.232-1.46 1.405c-.162.162-.297.297-.608.297l.216-3.073 5.578-5.034c.243-.216-.053-.335-.374-.12L7.008 14.48 4.02 13.56c-.653-.203-.666-.653.138-.966l10.87-4.19c.545-.197 1.02.132.534 1.844z"/>
+    </svg>
+    @eightevils
+  </a>
+
+  <!-- Footer -->
+  <p class="footer">Made By rebellion &nbsp;·&nbsp; RebellionX © 2025</p>
+
+</div>
+
+<div class="toast" id="toast">✓ Copied to clipboard</div>
+
+<script>
+  // ← ضع رابط الـ repo هنا بعد رفعه على GitHub
+  const REPO_URL = 'https://rebel1ion.github.io/repo/';
+
+  document.getElementById('urlText').textContent = REPO_URL;
+  document.getElementById('sileoBtn').href  = 'sileo://source/'  + REPO_URL;
+  document.getElementById('zebraBtn').href  = 'zbra://sources/add/' + REPO_URL;
+  document.getElementById('cydiaBtn').href  = 'cydia://url/https://cydia.saurik.com/api/share#?source=' + REPO_URL;
+
+  function copyUrl() {
+    navigator.clipboard.writeText(REPO_URL).then(() => {
+      const box  = document.getElementById('urlBox');
+      const btn  = document.getElementById('copyBtn');
+      const toast = document.getElementById('toast');
+      box.classList.add('copied');
+      btn.textContent = 'Copied!';
+      toast.classList.add('show');
+      setTimeout(() => {
+        box.classList.remove('copied');
+        btn.textContent = 'Copy';
+        toast.classList.remove('show');
+      }, 2000);
+    });
+  }
+</script>
+
+</body>
+</html>

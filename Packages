@@ -15,3 +15,20 @@ Description: Keep any app alive in background. Forever.
 Author: rebellion
 Name: rebelX
 
+Package: com.yourepo.ah4mac.milkyway2ios16
+Version: 0.2.1
+Architecture: iphoneos-arm64e
+Maintainer: Ahmad4MayLod <ahmad4maylod@gmail.com>
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate, jp.akusio.backgrounderaction15, com.brend0n.milkyway2-ios14fix, oldabi, preferenceloader
+Filename: debs/com.yourepo.ah4mac.milkyway2ios16_0.2.1_iphoneos-arm64e.deb
+Size: 60464
+MD5sum: 94a27a197b8f4893ed17bbcf233d6ff6
+SHA1: d28f3acace9874a64bca0e2b59dfa15866ef838c
+SHA256: 2b0d24a8d869fc9c9b8ef229713726a9ea676a1a0293a832cc0a578937cec1c2
+Section: Tweaks
+Description: أداة للتعدد المهام على iOS 16 — تخلي التطبيقات تشتغل في الخلفية.
+ تدعم RootHide وBootstrap. تحتاج تثبيت MilkyWay Fix قبل هذي الأداة.
+Author: akusio <akusio-report@neko2.net>
+Name: MilkyWay2 iOS 16
+

@@ -1,0 +1,33 @@
+{
+  "minVersion": "0.1",
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## rebelX\nKeep any app alive in background. **Forever.**\n\nWorks on iOS 14, 15 & 16. Supports Dopamine and Bootstrap.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Made By rebellion",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionButtonView",
+          "text": "✈  Telegram — @eightevils",
+          "action": "https://t.me/eightevils",
+          "openExternal": true,
+          "tintColor": "#0088cc"
+        }
+      ]
+    }
+  ]
+}

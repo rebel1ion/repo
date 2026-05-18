@@ -1,14 +1,14 @@
 Package: com.rebellion.rebelx
-Version: 1.0.0-4+debug
+Version: 1.0.0-5+debug
 Architecture: iphoneos-arm64
 Maintainer: rebellion <bbrr4a@gmail.com>
-Installed-Size: 64
+Installed-Size: 72
 Depends: mobilesubstrate | substitute | libhooker
-Filename: debs/com.rebellion.rebelx_1.0.0-4+debug_iphoneos-arm64.deb
-Size: 6628
-MD5sum: 74a9a7e036deec33ffb7f76c0f86cb34
-SHA1: da09042f7ab8fe463f6a13e39b95bd234fd1beed
-SHA256: 607025834f029fc8e083e1e7fd41722706d17c49c83030e729c521cf7540f9a1
+Filename: debs/com.rebellion.rebelx_1.0.0-5+debug_iphoneos-arm64.deb
+Size: 8302
+MD5sum: a416c21181d6dd52459aaa4aeaba4db6
+SHA1: 6f636b8be3b7a9ee5bbf024957d32a7803bcb8c7
+SHA256: 0345b079e275da134b83b3c148405f3afc52f487553d1f25df27ba73659ef89e
 Section: Tweaks
 Description: Keep any app alive in background. Forever.
  Works on iOS 14, 15 & 16. Supports Dopamine and Bootstrap.

@@ -3,7 +3,13 @@ Label: RebellionX Repo
 Suite: stable
 Version: 1.0
 Codename: ios
-Architectures: iphoneos-arm iphoneos-arm64
+Architectures: iphoneos-arm64
 Components: main
 Description: Built different. Made to dominate.
 Icon: CydiaIcon.png
+MD5Sum:
+ 2e02c68d625218f4f28753e2cebe6073 593 Packages
+ f7a94c392d2de9da4808116cb8b8a3cb 458 Packages.bz2
+SHA256:
+ 612760537d0b187ba9c56e368513c65d5c4b47d92645e433be3b96994902d582 593 Packages
+ 1ed02b6a3472b9a1a13d5bbd2ea4d3a2381252e4d06e170ed6e7a00c3514207f 458 Packages.bz2

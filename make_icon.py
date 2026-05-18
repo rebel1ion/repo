@@ -4,8 +4,8 @@ SIZE   = 512
 RADIUS = 108   # iOS icon corner radius at 512px
 
 FONT_DIR = '/usr/share/fonts/truetype/ubuntu/'
-font_R = ImageFont.truetype(FONT_DIR + 'Ubuntu-B.ttf', 310)
-font_x = ImageFont.truetype(FONT_DIR + 'Ubuntu-B.ttf', 130)
+font_R = ImageFont.truetype(FONT_DIR + 'Ubuntu-B.ttf', 300)
+font_x = ImageFont.truetype(FONT_DIR + 'Ubuntu-B.ttf', 168)
 
 WHITE = (255, 255, 255)
 GREEN = (18,  222, 115)   # #12DE73
@@ -61,21 +61,28 @@ for off in [(4, 5), (3, 4), (2, 3)]:
 # ── Draw "R" in white ─────────────────────────────────────────────────────
 draw.text((R_left, R_top), 'R', fill=WHITE + (255,), font=font_R)
 
-# ── Position "x" at the leg of R ──────────────────────────────────────────
-# Ubuntu Bold R: leg runs from ~62% x to ~100% x, ~52% y to ~100% y
-# of the bounding box. Centre "x" at ~80% x, ~76% y of the R box.
-X_cx = R_left + int(R_w * 0.80)
-X_cy = R_top  + int(R_h * 0.76)
+# ── Position "x" deep inside the leg of R ────────────────────────────────
+# Ubuntu Bold R at 300px: leg centre is ~68% x, 72% y of the R bounding box
+X_cx = R_left + int(R_w * 0.72)
+X_cy = R_top  + int(R_h * 0.72)
 
 X_left = X_cx - x_w // 2
 X_top  = X_cy - x_h // 2
 
-# Green glow (soft shadow around the X)
-for off, alpha in [((3,3), 80), ((2,2), 120), ((1,1), 60)]:
-    draw.text((X_left + off[0], X_top + off[1]), 'x',
-              fill=(18, 222, 115, alpha), font=font_x)
+# Dark mask: paint a patch of dark bg so the X "cuts through" the R leg
+mask_pad = 6
+draw.rectangle(
+    [X_left - mask_pad, X_top - mask_pad,
+     X_left + x_w + mask_pad, X_top + x_h + mask_pad],
+    fill=(14, 10, 28, 220)
+)
 
-# Draw "x" in green
+# Green glow layers
+for off, a in [((4,4), 55), ((3,3), 90), ((2,2), 130), ((1,1), 80)]:
+    draw.text((X_left + off[0], X_top + off[1]), 'x',
+              fill=(18, 222, 115, a), font=font_x)
+
+# Draw "x" in green on top
 draw.text((X_left, X_top), 'x', fill=GREEN + (255,), font=font_x)
 
 # ── Save ──────────────────────────────────────────────────────────────────

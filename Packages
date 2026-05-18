@@ -7,7 +7,7 @@ Depends: mobilesubstrate
 Filename: debs/com.brend0n.milkyway2-ios14fix_0.0.4_iphoneos-arm64.deb
 Size: 12610
 MD5sum: e88a03bc1a6611ac0628f959aac11c4f
-SHA1: 3f14155d3e1490e7e8628f902232e4a78852ec66
+SHA1: e0d700ab7dfc64702645ac2e9c087bfe2ab7fbc6 3f14155d3e1490e7e8628f902232e4a78852ec66
 SHA256: c40256bf5a01b75271126ac46e4c1bde383eb9b61f76e56c6fb0846d2db5654a
 Section: Tweaks
 Description: ⚠️ يجب تثبيت هذه الأداة قبل تثبيت MilkyWay2 iOS 16.
@@ -16,16 +16,16 @@ Author: Brend0n <brendonjkding@126.com>
 Name: MilkyWay2-iOS14Fix
 
 Package: com.rebellion.rebelx
-Version: 1.1.0-5+debug
+Version: 1.1.0-7+debug
 Architecture: iphoneos-arm64
 Maintainer: rebellion <bbrr4a@gmail.com>
-Installed-Size: 112
+Installed-Size: 96
 Depends: mobilesubstrate | substitute | libhooker, preferenceloader
-Filename: debs/com.rebellion.rebelx_1.1.0-5+debug_iphoneos-arm64.deb
-Size: 32212
-MD5sum: 43d0e3a3ab62b60b8d444f2a9c652633
-SHA1: a395b5320fedae02e585b6491e1aff6e22a743f0
-SHA256: 619e9d721f1ce913a209a7f25f395a4dcfcf7c1ad18c5edbe375f89b76ff40d3
+Filename: debs/com.rebellion.rebelx_1.1.0-7+debug_iphoneos-arm64.deb
+Size: 26360
+MD5sum: 637726b1a2ca37a4e153339f1dc36bcd
+SHA1:
+SHA256: e30c00f916175c2180a5f9a2fca29db0cdc191f27326f7e99a6946a102fb38ee
 Section: Tweaks
 Description: Keep any app alive in background. Forever.
  Works on iOS 14, 15 & 16. Supports Dopamine and Bootstrap.

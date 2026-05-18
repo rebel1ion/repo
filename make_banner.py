@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 import os
 
-W, H = 1290, 430
+W, H = 750, 280
 img = Image.new('RGB', (W, H))
 px  = img.load()
 
@@ -23,9 +23,9 @@ draw = ImageDraw.Draw(img)
 
 # ── Fonts ─────────────────────────────────────────────────────────────────
 FONT_DIR = '/usr/share/fonts/truetype/ubuntu/'
-font_title   = ImageFont.truetype(FONT_DIR + 'Ubuntu-B.ttf', 128)
-font_tag     = ImageFont.truetype(FONT_DIR + 'Ubuntu-R.ttf',  34)
-font_wm      = ImageFont.truetype(FONT_DIR + 'Ubuntu-B.ttf', 360)
+font_title   = ImageFont.truetype(FONT_DIR + 'Ubuntu-B.ttf', 88)
+font_tag     = ImageFont.truetype(FONT_DIR + 'Ubuntu-R.ttf', 24)
+font_wm      = ImageFont.truetype(FONT_DIR + 'Ubuntu-B.ttf', 240)
 
 WHITE = (255, 255, 255)
 GREEN = (18,  222, 115)   # #12DE73
@@ -42,7 +42,7 @@ tag_w   = tag_bb[2]   - tag_bb[0]
 
 # Centre title block horizontally
 title_x = (W - title_w) // 2
-Y_TITLE = (H - 155) // 2   # vertical centre, shifted slightly up
+Y_TITLE = (H - 110) // 2   # vertical centre
 
 # ── Watermark "X" centred behind text ────────────────────────────────────
 wm_bb = draw.textbbox((0, 0), 'X', font=font_wm)
@@ -55,7 +55,7 @@ draw.text((title_x + rebel_w, Y_TITLE), 'X',     fill=GREEN, font=font_title)
 
 # ── Tagline centred ───────────────────────────────────────────────────────
 tag_x = (W - tag_w) // 2
-draw.text((tag_x, Y_TITLE + 142),
+draw.text((tag_x, Y_TITLE + 98),
           'Built different. Made to dominate.',
           fill=(130, 130, 130), font=font_tag)
 

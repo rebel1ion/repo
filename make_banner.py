@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 import os
 
-W, H = 1290, 340
+W, H = 1290, 430
 img = Image.new('RGB', (W, H))
 px  = img.load()
 
@@ -27,25 +27,35 @@ font_title   = ImageFont.truetype(FONT_DIR + 'Ubuntu-B.ttf', 128)
 font_tag     = ImageFont.truetype(FONT_DIR + 'Ubuntu-R.ttf',  34)
 font_wm      = ImageFont.truetype(FONT_DIR + 'Ubuntu-B.ttf', 360)
 
-# ── Watermark "X" (very faint, right side) ───────────────────────────────
-# Draw in a color slightly lighter than background corner
-draw.text((W - 260, -60), 'X', fill=(36, 16, 72), font=font_wm)
-
-# ── Title: "rebel" white + "X" green ─────────────────────────────────────
 WHITE = (255, 255, 255)
-GREEN = (18,  222, 115)   # #12DE73 — matches homescreen dot
+GREEN = (18,  222, 115)   # #12DE73
 
-X_START, Y_TITLE = 64, 78
+# ── Measure glyphs to centre everything ──────────────────────────────────
+rebel_bb  = draw.textbbox((0, 0), 'rebel', font=font_title)
+X_bb      = draw.textbbox((0, 0), 'X',     font=font_title)
+tag_bb    = draw.textbbox((0, 0), 'Built different. Made to dominate.', font=font_tag)
 
-# Measure "rebel" width
-rebel_bbox = draw.textbbox((X_START, Y_TITLE), 'rebel', font=font_title)
-rebel_w    = rebel_bbox[2] - rebel_bbox[0]
+rebel_w = rebel_bb[2] - rebel_bb[0]
+X_w     = X_bb[2]     - X_bb[0]
+title_w = rebel_w + X_w
+tag_w   = tag_bb[2]   - tag_bb[0]
 
-draw.text((X_START, Y_TITLE),            'rebel', fill=WHITE, font=font_title)
-draw.text((X_START + rebel_w, Y_TITLE),  'X',     fill=GREEN, font=font_title)
+# Centre title block horizontally
+title_x = (W - title_w) // 2
+Y_TITLE = (H - 155) // 2   # vertical centre, shifted slightly up
 
-# ── Tagline ───────────────────────────────────────────────────────────────
-draw.text((X_START + 2, Y_TITLE + 136),
+# ── Watermark "X" centred behind text ────────────────────────────────────
+wm_bb = draw.textbbox((0, 0), 'X', font=font_wm)
+wm_x  = (W - (wm_bb[2] - wm_bb[0])) // 2
+draw.text((wm_x, -50), 'X', fill=(36, 16, 72), font=font_wm)
+
+# ── Title: "rebel" white + "X" green, centred ───────────────────────────
+draw.text((title_x,           Y_TITLE), 'rebel', fill=WHITE, font=font_title)
+draw.text((title_x + rebel_w, Y_TITLE), 'X',     fill=GREEN, font=font_title)
+
+# ── Tagline centred ───────────────────────────────────────────────────────
+tag_x = (W - tag_w) // 2
+draw.text((tag_x, Y_TITLE + 142),
           'Built different. Made to dominate.',
           fill=(130, 130, 130), font=font_tag)
 

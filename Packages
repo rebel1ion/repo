@@ -31,6 +31,7 @@ SHA256: 0345b079e275da134b83b3c148405f3afc52f487553d1f25df27ba73659ef89e
 Section: Tweaks
 Description: Keep any app alive in background. Forever.
  Works on iOS 14, 15 & 16. Supports Dopamine and Bootstrap.
+ Telegram: t.me/eightevils
 Author: rebellion
 Name: rebelX
 

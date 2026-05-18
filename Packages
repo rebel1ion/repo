@@ -16,22 +16,23 @@ Author: Brend0n <brendonjkding@126.com>
 Name: MilkyWay2-iOS14Fix
 
 Package: com.rebellion.rebelx
-Version: 1.1.0-3+debug
+Version: 1.1.0-5+debug
 Architecture: iphoneos-arm64
 Maintainer: rebellion <bbrr4a@gmail.com>
-Installed-Size: 96
+Installed-Size: 112
 Depends: mobilesubstrate | substitute | libhooker, preferenceloader
-Filename: debs/com.rebellion.rebelx_1.1.0-3+debug_iphoneos-arm64.deb
-Size: 16356
-MD5sum: df9954ecb4a1d2e6290accb4bd3b8612
-SHA1: 39437858e761854c1ae2bf991af1838b218bfa0b
-SHA256: df3eb1239eb579e669496863957482066574855865443d6ba80c974a797995cf
+Filename: debs/com.rebellion.rebelx_1.1.0-5+debug_iphoneos-arm64.deb
+Size: 32212
+MD5sum: 43d0e3a3ab62b60b8d444f2a9c652633
+SHA1: a395b5320fedae02e585b6491e1aff6e22a743f0
+SHA256: 619e9d721f1ce913a209a7f25f395a4dcfcf7c1ad18c5edbe375f89b76ff40d3
 Section: Tweaks
 Description: Keep any app alive in background. Forever.
  Works on iOS 14, 15 & 16. Supports Dopamine and Bootstrap.
  Homescreen indicator + banners. Telegram: t.me/eightevils
 Author: rebellion
 Name: rebelX
+Icon: https://rebel1ion.github.io/repo/icons/rebelx.png
 Sileodepiction: https://rebel1ion.github.io/repo/depictions/com.rebellion.rebelx.json
 
 Package: com.yourepo.ah4mac.milkyway2ios16

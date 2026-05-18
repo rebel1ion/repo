@@ -48,7 +48,9 @@ SHA1: d28f3acace9874a64bca0e2b59dfa15866ef838c
 SHA256: 2b0d24a8d869fc9c9b8ef229713726a9ea676a1a0293a832cc0a578937cec1c2
 Section: Tweaks
 Description: أداة للتعدد المهام على iOS 16 — تخلي التطبيقات تشتغل في الخلفية.
- تدعم RootHide وBootstrap. يجب تثبيت MilkyWay2-iOS14Fix أولاً قبل هذه الأداة.
+ تدعم RootHide وBootstrap.
+ ⚠️ تنبيه مهم: قبل تحميل هذه الأداة يجب عليك أولاً تثبيت MilkyWay2-iOS14Fix
+ وإلا لن تعمل الأداة بشكل صحيح.
 Author: akusio <akusio-report@neko2.net>
 Name: MilkyWay2 iOS 16
 

@@ -13,9 +13,7 @@ Section: Tweaks
 Description: ⚠️ يجب تثبيت هذه الأداة قبل تثبيت MilkyWay2 iOS 16.
  إصلاح ضروري لتشغيل MilkyWay2 بشكل صحيح على iOS 14 وما فوق.
 Author: Brend0n <brendonjkding@126.com>
-Depiction: http://brendonjkding.github.io/depictions/web/?p=com.brend0n.milkyway2-ios14fix
 Name: MilkyWay2-iOS14Fix
-Sileodepiction: http://brendonjkding.github.io/depictions/web/com.brend0n.milkyway2-ios14fix/depiction.json
 
 Package: com.rebellion.rebelx
 Version: 1.0.0-5+debug

@@ -42,9 +42,9 @@ Depends: preferenceloader
 Conflicts: com.rebellion.rebelx
 Filename: debs/com.rebellion.rebelx.roothide_1.1.0-21_iphoneos-arm64e.deb
 Size: 55322
-MD5sum: 8e75a65ef528e4571cf70100a195d30d
-SHA1: 994c0bf386081c0b3f1f151041c8c138c312a1a9
-SHA256: 26cdf5396338b9beaeb1a0835f6f0be787e21c8a10ec905c34130ebc64594a59
+MD5sum: f967d48dc2c793cb1af7793c9056a7c3
+SHA1: e603d41f7b3650826ece3e6bc964b6475ee8df99
+SHA256: afb88dac4b2f54371687bed6559bb87f5fb3dfe7a388062c717ba03489fa9d5c
 Section: Tweaks
 Description: Keep any app alive in background. Forever.
  For RootHide Bootstrap on iOS 16.

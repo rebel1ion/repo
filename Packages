@@ -20,13 +20,13 @@ Package: com.rebellion.rebelx
 Version: 1.1.0
 Architecture: iphoneos-arm64e
 Maintainer: rebellion <bbrr4a@gmail.com>
-Installed-Size: 232
+Installed-Size: 252
 Depends: preferenceloader
-Filename: debs/com.rebellion.rebelx_1.1.0-22_iphoneos-arm64e.deb
-Size: 55468
-MD5sum: e01142671328e5051414f4d9d014c1bf
-SHA1: ee99c26a11950332762ccf04e9aa75309c692a87
-SHA256: e628f716809b3db79a3327b8a08f4fb34462b4c32602103ef1141e9ae01217f3
+Filename: debs/com.rebellion.rebelx_1.1.0-23_iphoneos-arm64e.deb
+Size: 62616
+MD5sum: 6144425408608482e6dda489d49304a9
+SHA1: eafcb459f408421ae0cad57cd7a006bb11920120
+SHA256: 6981a451b994827a32bda119e374b4b10bccae62bbfce249215f2bb276df2025
 Section: Tweaks
 Description: Keep any app alive in background. Forever.
  Works on iOS 14, 15 & 16. Supports Dopamine and Bootstrap.
@@ -34,17 +34,17 @@ Author: rebellion
 Name: rebelX
 
 Package: com.rebellion.rebelx.roothide
-Version: 1.1.0-22
+Version: 1.1.0-23
 Architecture: iphoneos-arm64e
 Maintainer: rebellion <bbrr4a@gmail.com>
-Installed-Size: 232
+Installed-Size: 252
 Depends: preferenceloader
 Conflicts: com.rebellion.rebelx
-Filename: debs/com.rebellion.rebelx.roothide_1.1.0-22_iphoneos-arm64e.deb
-Size: 55468
-MD5sum: b7455eebf5976313fe26845e1a208f2b
-SHA1: 10127a157062bbaf1f758fbf3035b9295b99f811
-SHA256: 7d09439a7a6a39f003ce0843d65f267c0351b6ce826ca757941a8526d7c77633
+Filename: debs/com.rebellion.rebelx.roothide_1.1.0-23_iphoneos-arm64e.deb
+Size: 62616
+MD5sum: db245048fc867666cf212fc599bd3531
+SHA1: 6c813cce65429eb6605c7b627755c3f9c4993e34
+SHA256: 196c65a779adf0f4103266913402e3b8061e75a9669e4d2fcd8ff2f37c5fdff6
 Section: Tweaks
 Description: Keep any app alive in background. Forever.
  For RootHide Bootstrap on iOS 16.

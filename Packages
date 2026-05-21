@@ -33,6 +33,23 @@ Description: Keep any app alive in background. Forever.
 Author: rebellion
 Name: rebelX
 
+Package: com.rebellion.rebelx.roothide
+Version: 1.1.0-12+debug
+Architecture: iphoneos-arm64e
+Maintainer: rebellion <bbrr4a@gmail.com>
+Depends: preferenceloader
+Conflicts: com.rebellion.rebelx
+Filename: debs/com.rebellion.rebelx.roothide_1.1.0-12_iphoneos-arm64e.deb
+Size: 51112
+MD5sum: 62917cf0df6b875156e6e3f04482a8ba
+SHA1: 43fd0f49eb9c5b796a5a7426037766193a6b9d3a
+SHA256: 98cc78e75f54085808d6f7d68f51dfe33038a5f5cc8acc62cd502ab0d49ba004
+Section: Tweaks
+Description: Keep any app alive in background. Forever.
+ For RootHide Bootstrap on iOS 16.
+Author: rebellion
+Name: rebelX RootHide
+
 Package: com.yourepo.ah4mac.milkyway2ios16
 Version: 0.2.1
 Architecture: iphoneos-arm64e

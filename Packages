@@ -17,16 +17,16 @@ Name: MilkyWay2-iOS14Fix
 Sileodepiction: http://brendonjkding.github.io/depictions/web/com.brend0n.milkyway2-ios14fix/depiction.json
 
 Package: com.rebellion.rebelx
-Version: 1.1.0-15+debug
+Version: 1.1.0-16+debug
 Architecture: iphoneos-arm64e
 Maintainer: rebellion <bbrr4a@gmail.com>
 Installed-Size: 208
 Depends: preferenceloader
-Filename: debs/com.rebellion.rebelx_1.1.0-15+debug_iphoneos-arm64e.deb
-Size: 51130
-MD5sum: 58ea13815a8c368ba72dd19c84014f7f
-SHA1: a7153bf4c9f83acd9c4d335dfe4899e691561017
-SHA256: a4ca2aace9f77fd618b339ef24111b2c7bb94f64b8167ebdeab6deb4165dc148
+Filename: debs/com.rebellion.rebelx_1.1.0-16+debug_iphoneos-arm64e.deb
+Size: 51330
+MD5sum: 2193828e73d855e0962c1ec0c0ed50ed
+SHA1: 49e8180280d1b3cfde42a0b90bc73503ae5007f9
+SHA256: cbfe982aa71ab146797aa2e82b459c89f7865a7bbd0fd4513a7ba1a9ccb9ffad
 Section: Tweaks
 Description: Keep any app alive in background. Forever.
  Works on iOS 14, 15 & 16. Supports Dopamine and Bootstrap.
@@ -34,17 +34,17 @@ Author: rebellion
 Name: rebelX
 
 Package: com.rebellion.rebelx.roothide
-Version: 1.1.0-15
+Version: 1.1.0-16
 Architecture: iphoneos-arm64e
 Maintainer: rebellion <bbrr4a@gmail.com>
 Installed-Size: 208
 Depends: preferenceloader
 Conflicts: com.rebellion.rebelx
-Filename: debs/com.rebellion.rebelx.roothide_1.1.0-15_iphoneos-arm64e.deb
-Size: 51122
-MD5sum: 797a5ea39fec6c7a6086465d9a2b4afe
-SHA1: 98b47ad2deceef5d29c23d5e62fbed866975d111
-SHA256: 9851d2d3b6cb4566d7e130b162e8c05292d18fff73a3c4e63a7d013fd1bcd51f
+Filename: debs/com.rebellion.rebelx.roothide_1.1.0-16_iphoneos-arm64e.deb
+Size: 51322
+MD5sum: 1f2fd3527f4dab82ee37228b202f78bc
+SHA1: a59d0ccd71c7aa866f6ce1f103010612a319490b
+SHA256: 107acfd9ea99b741a86bc7b5ca13ae1ebc4566ec9e50b7120e071534c5b3950b
 Section: Tweaks
 Description: Keep any app alive in background. Forever.
  For RootHide Bootstrap on iOS 16.

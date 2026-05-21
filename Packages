@@ -4,7 +4,7 @@ Architecture: iphoneos-arm64
 Maintainer: Brend0n <brendonjkding@126.com>
 Installed-Size: 156
 Depends: mobilesubstrate
-Filename: com.brend0n.milkyway2-ios14fix_0.0.4_iphoneos-arm64.deb
+Filename: debs/com.brend0n.milkyway2-ios14fix_0.0.4_iphoneos-arm64.deb
 Size: 12610
 MD5sum: e88a03bc1a6611ac0628f959aac11c4f
 SHA1: 3f14155d3e1490e7e8628f902232e4a78852ec66
@@ -22,7 +22,7 @@ Architecture: iphoneos-arm64
 Maintainer: rebellion <bbrr4a@gmail.com>
 Installed-Size: 172
 Depends: mobilesubstrate | substitute | libhooker, preferenceloader
-Filename: com.rebellion.rebelx_1.1.0-11+debug_iphoneos-arm64.deb
+Filename: debs/com.rebellion.rebelx_1.1.0-11+debug_iphoneos-arm64.deb
 Size: 48844
 MD5sum: 85ee1825a8969f6972a9a1f14d757e23
 SHA1: e694b194109c57f2119dd613168c82b8bc130215
@@ -39,7 +39,7 @@ Architecture: iphoneos-arm64e
 Maintainer: Ahmad4MayLod <ahmad4maylod@gmail.com>
 Pre-Depends: rootless-compat(>= 0.9)
 Depends: mobilesubstrate, jp.akusio.backgrounderaction15, com.brend0n.milkyway2-ios14fix, oldabi, preferenceloader
-Filename: com.yourepo.ah4mac.milkyway2ios16_0.2.1_iphoneos-arm64e.deb
+Filename: debs/com.yourepo.ah4mac.milkyway2ios16_0.2.1_iphoneos-arm64e.deb
 Size: 60464
 MD5sum: 94a27a197b8f4893ed17bbcf233d6ff6
 SHA1: d28f3acace9874a64bca0e2b59dfa15866ef838c

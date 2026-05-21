@@ -8,8 +8,8 @@ Components: main
 Description: Built different. Made to dominate.
 Icon: CydiaIcon.png
 MD5Sum:
- \ \ Packages
- \ \ Packages.bz2
+ 19e2e7324e705c5a56d1f603a11b7a9d 2577 Packages
+ f6a26da2a82a67d692adb899e2bdb86e 1264 Packages.bz2
 SHA256:
- \ \ Packages
- \ \ Packages.bz2
+ 58645a1989093e230b3fcfdc200a0aa6b1d750074cb30a76fae2951accb7a72e 2577 Packages
+ cc310516b08ddf0637951a38207419adc7488721f320a391c63a9bbd97c81c3d 1264 Packages.bz2

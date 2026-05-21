@@ -17,16 +17,16 @@ Name: MilkyWay2-iOS14Fix
 Sileodepiction: http://brendonjkding.github.io/depictions/web/com.brend0n.milkyway2-ios14fix/depiction.json
 
 Package: com.rebellion.rebelx
-Version: 1.1.0-12+debug
+Version: 1.1.0-15+debug
 Architecture: iphoneos-arm64e
 Maintainer: rebellion <bbrr4a@gmail.com>
-Installed-Size: 172
-Depends: mobilesubstrate | substitute | libhooker, preferenceloader
-Filename: debs/com.rebellion.rebelx_1.1.0-13+debug_iphoneos-arm64e.deb
-Size: 51158
-MD5sum: 57ea23a51d73b61e4cbae913daa6d5b9
-SHA1: b723699563f0fbcacdc316a09f0d128433ad3dea
-SHA256: 22e1b82a7afcb96e48df9bbc7460e036469dfae238b6915951c8b7114bd263be
+Installed-Size: 208
+Depends: preferenceloader
+Filename: debs/com.rebellion.rebelx_1.1.0-15+debug_iphoneos-arm64e.deb
+Size: 51130
+MD5sum: 58ea13815a8c368ba72dd19c84014f7f
+SHA1: a7153bf4c9f83acd9c4d335dfe4899e691561017
+SHA256: a4ca2aace9f77fd618b339ef24111b2c7bb94f64b8167ebdeab6deb4165dc148
 Section: Tweaks
 Description: Keep any app alive in background. Forever.
  Works on iOS 14, 15 & 16. Supports Dopamine and Bootstrap.
